@@ -19,8 +19,8 @@ function mostrarInfo(id, boton) {
 }
 function mostrarInfoServicios(id, boton) {
     // Ocultar todos los elementos con la clase 'info'
-    var infoserv = document.querySelectorAll('.info-Servicios');
-    infoserv.forEach(function(infoServicios) {
+    var infos = document.querySelectorAll('.infoServicios');
+    infos.forEach(function(infoServicios) {
         infoServicios.style.display = 'none';
     });
 
@@ -29,12 +29,12 @@ function mostrarInfoServicios(id, boton) {
     infoServicioSeleccionada.style.display = 'block';
 
     // Remover la clase 'activo' de todos los botones
-    var botonesServicio = document.querySelectorAll('.boton-servicios');
-    botonesServicio.forEach(function(btnServicio) {
-        btnServicio.classList.remove('activate');
+    var botones = document.querySelectorAll('.boton-servicios');
+    botones.forEach(function(btn) {
+        btn.classList.remove('activo');
     });
     // Agregar la clase 'activo' al botón seleccionado
-    boton.classList.add('activate');
+    boton.classList.add('activo');
 }
 // Función para mostrar información inicial al cargar la página
 document.addEventListener("DOMContentLoaded", function() {
