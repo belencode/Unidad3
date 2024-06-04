@@ -90,13 +90,13 @@
       </div>
       <div class="col-md-6">
         <div class="menu-servicios">
-          <button class="boton-servicios" onclick="mostrarInfo('infoServicio1',this)">Aire Acondicionado</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio1',this)">Aire Acondicionado</button>
           <div id="infoServicio1" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de sistemas de aire acondicionado, tanto domésticos como industriales. Nos encargamos de la limpieza, el cambio de filtros, la recarga de gas y la detección y solución de averías.</div>
-          <button class="boton-servicios" onclick="mostrarInfo('infoServicio2',this)">Sala de calderas</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio2',this)">Sala de calderas</button>
           <div id="infoServicio2" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de calderas, tanto de gas como eléctricas. Nos encargamos del mantenimiento preventivo, la sustitución de piezas, la purga de radiadores y la regulación de la presión y la temperatura. </div>
-          <button class="boton-servicios" onclick="mostrarInfo('infoServicio3',this)">Grupo electrógeno</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio3',this)">Grupo electrógeno</button>
           <div id="infoServicio3" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de grupos electrógenos, tanto monofásicos como trifásicos. Nos encargamos del suministro de combustible, el cambio de aceite, el control de baterías y la verificación del funcionamiento correcto. </div>
-          <button class="boton-servicios" onclick="mostrarInfo('infoServicio4',this)">Sala de bombas</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio4',this)">Sala de bombas</button>
           <div id="infoServicio4" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de bombas hidráulicas, tanto centrífugas como periféricas. Nos encargamos del ajuste de válvulas, el cambio de sellos mecánicos, el equilibrado de rotores y la limpieza de impulsores. </div>
         </div>
       </div>
