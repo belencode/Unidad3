@@ -66,37 +66,17 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-carrusel">
-        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicios" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicios" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicios" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+       <img id="imagen-servicio" src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicios">
       </div>
       <div class="col-md-6">
         <div class="menu-servicios">
-          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio1',this)">Aire Acondicionado</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio1',this,'https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984')">Aire Acondicionado</button>
           <div id="infoServicio1" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de sistemas de aire acondicionado, tanto domésticos como industriales. Nos encargamos de la limpieza, el cambio de filtros, la recarga de gas y la detección y solución de averías.</div>
-          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio2',this)">Sala de calderas</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio2',this,'https://www.energyandwater.cl/gallery_gen/9d0c9a5af9f0a48e29f3d3b61818457e_640x1176_fit.jpg?ts=1702866984')">Sala de calderas</button>
           <div id="infoServicio2" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de calderas, tanto de gas como eléctricas. Nos encargamos del mantenimiento preventivo, la sustitución de piezas, la purga de radiadores y la regulación de la presión y la temperatura. </div>
-          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio3',this)">Grupo electrógeno</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio3',this,'https://www.energyandwater.cl/gallery_gen/1dff1ecb88d5aa605aa877c96cd9df8b_640x1116_fit.jpg?ts=1702866984')">Grupo electrógeno</button>
           <div id="infoServicio3" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de grupos electrógenos, tanto monofásicos como trifásicos. Nos encargamos del suministro de combustible, el cambio de aceite, el control de baterías y la verificación del funcionamiento correcto. </div>
-          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio4',this)">Sala de bombas</button>
+          <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio4',this,'https://www.energyandwater.cl/gallery_gen/6f174bfc2c2d263b250ab7bee3d6255f_640x1116_fit.jpg?ts=1702866984')">Sala de bombas</button>
           <div id="infoServicio4" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de bombas hidráulicas, tanto centrífugas como periféricas. Nos encargamos del ajuste de válvulas, el cambio de sellos mecánicos, el equilibrado de rotores y la limpieza de impulsores. </div>
         </div>
       </div>
