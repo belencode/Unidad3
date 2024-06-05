@@ -1,17 +1,39 @@
+/*  .bg-lightmodificado {
+    --bs-bg-opacity: 1;
+    background-color: #8F6056 !important;
+}
+*/
+
+
 *{
     padding: 0;
     margin: 0;
 }
 .seccion{
-    scroll-margin-top: 80px;
+    scroll-margin-top: 130px;
     margin-bottom: 45px;
 }
+/*
 header{
     width: 100%;
     top: 0;
     position: fixed;
     z-index: 10;
+    background-color: #fff; 
+} */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Añadido para evitar que el encabezado sea transparente */
+    z-index: 1000;
+    padding: 10px 0; /* Añadido para espaciar el contenido del encabezado */
+    
 }
+
+
 .Logo_Menu{
     height: 90px;
     border-radius:150px;
@@ -37,32 +59,38 @@ header{
     font-weight: bold;
 }
 .banner{
-    margin-top: 120px;
+    
     width:100%;
     height: 485px;
     background-image: url(https://www.energyandwater.cl/gallery_gen/4c06afb30b36d6b15132b0123f35d4da_fit.com-JsW9gQt_f0DyAq5xCJV6zthJnDrFB9xNT_7Zi0dheuPPGv82nVuYHe2Y84XRJFggmmzcKHuvqb_wD3-RbhWgWSg_w16383);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(16, 17, 22, 0.78);
+    /*background-color: rgba(16, 17, 22, 0.78);*/
+    /* Utiliza el 4% del ancho de la ventana como tamaño de fuente */
+  margin-bottom: 1rem;
 }
 .banner h1{
     text-align:left;
     padding-top: 130px;
-    padding-left:342px;
+    padding-left: 1px; 
     color: #fff;
     font-family:Osward,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:90px;
+    
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     font-weight: bold;
+     /* Utiliza el 4% del ancho de la ventana como tamaño de fuente */
+    margin-bottom: 1rem;
 }
 .banner h2{
     text-align:left;
-    padding-left:342px;
+    padding-left: 1px;
     color: #E1F1FF;
     font-family:Osward,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:24px;
+    
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-size: 4vw; /* Utiliza el 4% del ancho de la ventana como tamaño de fuente */
+    margin-bottom: 1rem;
 }
 .contenido_principal{
     text-align: center;
@@ -81,7 +109,7 @@ header{
 }
 .seccion h2{
     text-align:left;
-    color: #4362B1;
+    color: #4362B1 !important;
     font-family:Osward,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:35px;
     font-weight: bold;
@@ -107,7 +135,7 @@ header{
     font-size:16px;
 }
 .seccion p{
-    color: #000;
+    
     font-family:Osward,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:20px;
 }
@@ -129,7 +157,7 @@ header{
     padding-left: 25px;
     text-align: justify;
 }
-.imagen-servicios{
+.imagen-servicio{
     width:auto;
     height:auto;
     max-height: 500px;
@@ -150,9 +178,13 @@ header{
 .imagen-resumen{
     max-height: 330px;
     border-radius:96px;
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor padre */
+    height: auto;
 }
 .imagen-resumen2{
     max-height: 230px;
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor padre */
+    height: auto;
 }
 .info{
     display: none;
@@ -201,12 +233,13 @@ header{
     transition: background-color 0.3s;
     margin:5px;
 }
-.boton-servicios.activate{
+.boton-servicios.activo{
     background-color: #4362B1;
     border-radius:50px;
     padding:0;
     color:#fff;
 }
+
 .boton-preguntas{
     border: none;
     font-family:Osward,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -302,6 +335,10 @@ header{
         padding: 
         35px 0px;
     }
+    .seccion{
+        scroll-margin-top: 200px;
+        margin-bottom: 45px;
+    }
 }
 .container{
     padding-top: 20px;
@@ -315,3 +352,60 @@ header{
     background-color: #7894DD;
     border-color: #82A1EF ;
 }
+
+
+/* boton dia y noche */
+
+.fa-sun{
+ color: #FFFF00;
+ 
+}
+
+
+#toggle {
+    display: none;
+}
+
+#label_toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.dark{
+    background-color: #333 !important;
+    color: orange!important;
+    transition: all 1s ease;
+    
+}
+
+/*cambios navbar*/
+
+.navbar2 {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0.5rem;
+    /* --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65); */
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8); 
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    /* --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1); */
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    display: flex;
+    justify-content: center;
+    
+}
+
