@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="style.css" rel="styleSheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
+
+
+    link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Energy and Water</title>
     <link rel="Icon" href="Imagenes/IconoE.png">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg bg-light">
+<header id="header">
+    <nav id="header" class="navbar2 navbar-expand-lg bg-light">
         <div class="container-fluid">
           <img src="https://www.energyandwater.cl/gallery_gen/570337542efebc8b8ea892bab7890674_360x360_fit.jpg?ts=1702866984" class="Logo_Menu">
           <a class="navbar-brand" href="#">
@@ -42,10 +49,17 @@
             </ul>
           </div>
         </div>
+        
+        <div>
+          <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>  
+              <input type="checkbox" id="toggle">
+        
+   
+        </div>
     </nav>
 </header>
 <body>
-  <div class="banner">
+  <div class="banner" style="font-size: 4vw !important; ">
     <h1>Mantenimiento </br> para edificios</h1>
     <h2>CLIMATIZACIÓN, ELECTRICIDAD Y OBRAS MENORES DE CONSTRUCCIÓN.</h2>
   </div>
@@ -61,15 +75,16 @@
         <p>Corrige problemas o daños en las instalaciones o equipos.</p>
       </div>
       <div class="col info-servicios">
-        <img src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicios">
+        <img src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicio">
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-carrusel">
-       <img id="imagen-servicio" src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicios">
+      <div class="col-md-6">
+      <img id="imagen-servicio" src="https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984" class="imagen-servicio">
+        
       </div>
       <div class="col-md-6">
-        <div class="menu-servicios">
+      <div class="menu-servicios">
           <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio1',this,'https://www.energyandwater.cl/gallery_gen/3cf1905198e9763be7cf8a3276a8375b_559x1125_79x0_771x1125_crop.jpg?ts=1702866984')">Aire Acondicionado</button>
           <div id="infoServicio1" class="infoServicios">Instalamos, reparamos y revisamos todo tipo de sistemas de aire acondicionado, tanto domésticos como industriales. Nos encargamos de la limpieza, el cambio de filtros, la recarga de gas y la detección y solución de averías.</div>
           <button class="boton-servicios" onclick="mostrarInfoServicios('infoServicio2',this,'https://www.energyandwater.cl/gallery_gen/9d0c9a5af9f0a48e29f3d3b61818457e_640x1176_fit.jpg?ts=1702866984')">Sala de calderas</button>
@@ -242,19 +257,19 @@
       </div>
       <div class="col-md-6">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+          <input type="text" class="form-control" id="nombre" name="nombre"  onkeyup="validaForm()" placeholder="Nombre" required>
           <label for="nombre">Nombre</label>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="email" name="imail" placeholder="Email" required>
+          <input type="email" class="form-control" id="email" name="imail" onkeyup="validaForm()"  placeholder="Email" required>
           <label for="email">E-mail</label>
         </div>
       </div>
       <div class="col-md-12">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" required>
+          <input type="text" class="form-control" id="direccion" name="direccion" onkeyup="validaForm()" placeholder="Direccion" required>
           <label for="direccion">Dirección</label>
         </div>
       </div>
@@ -275,15 +290,15 @@
       <div class="col-md-6">
         <div class="mb-3">
             <label for="mensaje" class="form-label"><h5>Mensaje</h5></label>
-            <textarea class="form-control" id="mensaje" rows="4" name="mensaje" placeholder="Ingrese mensaje" required></textarea>
+            <textarea class="form-control" id="mensaje" onkeyup="validaForm()" rows="4" name="mensaje" placeholder="Ingrese mensaje" required></textarea>
         </div>
       </div>  
       <div class="col-12">
-        <button type="submit" class="btn btn-secondary btn-lg btnEnviar">Enviar Formulario</button>
+        <button type="submit" id="btnAgregar" class="btn btn-secondary btn-lg btnEnviar" disabled>Enviar Formulario</button>
       </div>
     </form>
   </div> 
-  <script src="scripts.js"></script>
+  <script src="assets/scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 <footer class="pie_pagina">
